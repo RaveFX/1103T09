@@ -45,7 +45,8 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
-        <h1 class="text-light"><a href="index.html">Selecao</a></h1>
+        <h1 class="text-light"><a href="index.html">UCSC</a></h1>
+        <h6 class="text-light"><a href="index.html">Information Systems</a></h6>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -150,30 +151,26 @@
       <div class="container">
 
         <div class="section-title" data-aos="zoom-out">
-          <h2>About</h2>
-          <p>Who we are</p>
-        </div>
-
-        <div class="row content" data-aos="fade-up">
-          <div class="col-lg-6">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-            </ul>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
-          </div>
+            <div id="tripetto"></div>
+            <script src="https://unpkg.com/tripetto-runner-foundation"></script>
+            <script src="https://unpkg.com/tripetto-runner-autoscroll"></script>
+            <script src="https://unpkg.com/tripetto-services"></script>
+            <script>
+            var tripetto = TripettoServices.init({ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibHVldjRlNStpVzVraDdsRkk4RGJhbHZBS01YQ0U0a0h4enphcnNkQWJpdz0iLCJkZWZpbml0aW9uIjoicnh0TG9odVc3czBJOHF1T1FoU1NVbTR6OEh5Qk1ZczdEQjRpYTdHZnc2RT0iLCJ0eXBlIjoiY29sbGVjdCJ9.F9BerTvFHj6UfmrKodjshui_uo5yGhuphfDyDYZUV6U" });
+            
+            TripettoAutoscroll.run({
+                element: document.getElementById("tripetto"),
+                definition: tripetto.definition,
+                styles: tripetto.styles,
+                l10n: tripetto.l10n,
+                locale: tripetto.locale,
+                translations: tripetto.translations,
+                attachments: tripetto.attachments,
+                onSubmit: tripetto.onSubmit,
+                snapshot: tripetto.snapshot,
+                onPause: tripetto.onPause
+            });
+            </script>
         </div>
 
       </div>
